@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Karen - Mi Amor Infinito</title>
+    <link rel="stylesheet" href="ana_karen_styles.css">
+</head>
+<body>
+    <!-- Fondo animado con estrellas y cometas -->
+    <div class="cosmic-background">
+        <div class="stars-container" id="starsContainer"></div>
+        <div class="comets-container" id="cometsContainer"></div>
+        <canvas id="gradientCanvas"></canvas>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="main-container">
+        <!-- Encabezado con nombre -->
+        <header class="header">
+            <div class="name-container">
+                <h1 class="beautiful-title">Ana Karen</h1>
+                <p class="subtitle">Mi amor, mi vida, mi eternidad</p>
+            </div>
+        </header>
+
+        <!-- Sección del contador de días -->
+        <section class="counter-section">
+            <div class="counter-container">
+                <h2 class="counter-title">Nuestro Tiempo Juntos</h2>
+                <div class="time-display">
+                    <div class="time-unit">
+                        <span class="time-number" id="days">0</span>
+                        <span class="time-label">Días</span>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="time-unit">
+                        <span class="time-number" id="hours">0</span>
+                        <span class="time-label">Horas</span>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="time-unit">
+                        <span class="time-number" id="minutes">0</span>
+                        <span class="time-label">Minutos</span>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="time-unit">
+                        <span class="time-number" id="seconds">0</span>
+                        <span class="time-label">Segundos</span>
+                    </div>
+                </div>
+                <p class="start-date">Desde el 6 de junio de 2024 ♡</p>
+            </div>
+        </section>
+
+        <!-- Sección "Sobre Nosotros" -->
+        <section class="about-section">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="about-content">
+                <p class="about-text">Comenzamos una historia de amor el 6 de junio de 2024, y cada día contigo es un regalo extraordinario. Tú eres mi inspiración, mi paz, mi felicidad.</p>
+                <p class="about-text">En cada amanecer te busco, en cada atardecer pienso en ti, y cada noche te sueño. Eres el amor que siempre soñé encontrar.</p>
+            </div>
+        </section>
+
+        <!-- Razones por las que te amo -->
+        <section class="reasons-section">
+            <h2 class="section-title">¿Por qué te amo?</h2>
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-icon">✨</div>
+                    <h3>Tu Sonrisa</h3>
+                    <p>Que ilumina mis días más oscuros como el sol ilumina la noche</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">💫</div>
+                    <h3>Tu Corazón</h3>
+                    <p>Puro, genuino y lleno de amor que me hace mejor persona</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">🌟</div>
+                    <h3>Tu Presencia</h3>
+                    <p>Me hace sentir en casa, seguro y profundamente amado</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">💝</div>
+                    <h3>Tu Risa</h3>
+                    <p>Es mi música favorita, mi recordatorio de que todo está bien</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frases hermosas personalizadas -->
+        <section class="quotes-section">
+            <div class="quotes-container">
+                <div class="quote-item active" style="--quote-index: 0;">
+                    <p class="quote-text">"Eres la razón por la cual creo en la magia, en los milagros y en un amor verdadero."</p>
+                    <p class="quote-author">- Para ti, Ana Karen</p>
+                </div>
+                <div class="quote-item" style="--quote-index: 1;">
+                    <p class="quote-text">"Tu sonrisa es mi brújula, tu risa es mi himno, tu amor es mi eternidad."</p>
+                    <p class="quote-author">- Desde mi corazón</p>
+                </div>
+                <div class="quote-item" style="--quote-index: 2;">
+                    <p class="quote-text">"En tus ojos encontré el universo, en tus manos encontré el hogar."</p>
+                    <p class="quote-author">- Mi amor infinito</p>
+                </div>
+                <div class="quote-item" style="--quote-index: 3;">
+                    <p class="quote-text">"Cada momento contigo es un capítulo hermoso de nuestra historia de amor."</p>
+                    <p class="quote-author">- Contigo siempre</p>
+                </div>
+                <div class="quote-item" style="--quote-index: 4;">
+                    <p class="quote-text">"No necesito estrellas en el cielo cuando tengo miles de razones para mirarte a los ojos."</p>
+                    <p class="quote-author">- Mi tesoro</p>
+                </div>
+            </div>
+            <div class="quote-nav">
+                <button class="quote-btn prev" id="prevQuote">❮</button>
+                <span class="quote-indicator" id="quoteIndicator">●○○○○</span>
+                <button class="quote-btn next" id="nextQuote">❯</button>
+            </div>
+        </section>
+
+        <!-- Galería de imágenes -->
+        <section class="gallery-section">
+            <h2 class="gallery-title">Galería de Momentos Especiales</h2>
+            <p class="gallery-subtitle">Cada imagen guarda un recuerdo hermoso contigo</p>
+            
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <div class="image-placeholder">
+                        <img src="/images/imagen_1.jpeg" alt="Momento especial 1">
+                    </div>
+                    <div class="image-label">Tu sonrisa</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-placeholder">
+                        <img src="/images/imagen_2.jpeg" alt="Momento especial 2">
+                    </div>
+                    <div class="image-label">Tu belleza</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-placeholder">
+                        <img src="/images/imagen_3.jpeg" alt="Momento especial 3">
+                    </div>
+                    <div class="image-label">Tu carita hermosa</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-placeholder">
+                        <img src="/images/imagen_4.jpeg" alt="Momento especial 4">
+                    </div>
+                    <div class="image-label">Mi inspiración</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-placeholder">
+                        <img src="/images/imagen_5.jpeg" alt="Momento especial 5">
+                    </div>
+                    <div class="image-label">Tu amor eterno</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-placeholder">
+                        <img src="/images/imagen_6.jpeg" alt="Momento especial 6">
+                    </div>
+                    <div class="image-label">Eres el amor de mi vida</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Corazones flotantes -->
+        <div class="hearts-container" id="heartsContainer"></div>
+
+        <!-- Mensaje final -->
+        <section class="final-message">
+            <div class="message-box">
+                <h2>Ana Karen Colin Colin</h2>
+                <p>Te amo más cada día, cada hora, cada segundo. Eres mi razón de sonreír, mi motivo de vivir.</p>
+                <span class="heart-emoji">♡ ♡ ♡</span>
+            </div>
+        </section>
+    </div>
+
+    <script src="ana_karen_script.js"></script>
+</body>
+</html>
